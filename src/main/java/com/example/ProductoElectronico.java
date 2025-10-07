@@ -2,7 +2,7 @@ package com.example;
 
 public class ProductoElectronico extends Producto {
     private int garantiaMeses;
-    private double consumoEnergia; // en kWh
+    private double consumoEnergia; 
     private boolean importado;
 
     public ProductoElectronico(String nombre, double precioBase, String codigo, int cantidadStock,
@@ -17,11 +17,11 @@ public class ProductoElectronico extends Producto {
         double precio = calcularPrecioFinal();
 
         if (importado) {
-            precio += getPrecioBase() * 0.10; // recargo del 10% si es importado
+            precio += getPrecioBase() * 0.10;
         }
 
         if (garantiaMeses > 24) {
-            precio += getPrecioBase() * 0.05; // 5% extra por garantía extendida
+            precio += getPrecioBase() * 0.05;
         }
 
         return precio;

@@ -14,10 +14,10 @@ public class ProductoAlimenticio extends Producto {
     }
 
     public double calcularPrecioAlimenticio() {
-        double precio = calcularPrecioFinal(); // precio base con IVA
+        double precio = calcularPrecioFinal();
 
         if (refrigerado) {
-            precio += getPrecioBase() * 0.08; // recargo del 8%
+            precio += getPrecioBase() * 0.08; 
         }
 
         double descuento = calcularDescuentoVencimiento();
@@ -32,10 +32,9 @@ public class ProductoAlimenticio extends Producto {
     }
 
     public double calcularValorInventario() {
-        return getPrecioBase() * getCantidadStock(); // usa getters correctamente
+        return getPrecioBase() * getCantidadStock();
     }
 
-    // Getters y Setters específicos de esta clase
     public boolean isRefrigerado() { return refrigerado; }
     public void setRefrigerado(boolean refrigerado) { this.refrigerado = refrigerado; }
 

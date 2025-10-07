@@ -42,9 +42,9 @@ public class Producto {
     public boolean isActivo() { return activo; }
     public void setActivo(boolean activo) { this.activo = activo; }
 
-    // Métodos de lógica 
+ 
     public double calcularPrecioFinal() {
-        return precioBase * 1.19; // aplica IVA
+        return precioBase * 1.19;
     }
 
     public boolean hayStock(int cantidad) {
